@@ -6,6 +6,7 @@ import {Attributes} from './interfaces/attributes.ts'
 import {Money} from './interfaces/money.ts'
 
 const att: Attributes = {
+    hp          : 10,
     strength    : 7,
     dexterity   : 15,
     constitution: 9,

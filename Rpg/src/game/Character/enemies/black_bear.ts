@@ -6,6 +6,7 @@ import {Attributes} from './interfaces/attributes.ts'
 import {Money} from './interfaces/money.ts'
 
 const att: Attributes = {
+    hp          : 75,
     strength    : 15,
     dexterity   : 10,
     constitution: 14,
@@ -22,7 +23,7 @@ const money: Money = {
 
 const stats = {
     name: 'Black Bear',
-    level: 2,
+    level: 3,
     experience: 100,
     attributes: att,
     money: money
