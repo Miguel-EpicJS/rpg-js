@@ -1,4 +1,3 @@
-import { Character } from '../Character/character'
 // @ts-ignore
 import {Character} from '../Character/character.ts'
 
