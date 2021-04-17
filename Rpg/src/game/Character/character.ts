@@ -19,4 +19,15 @@ export class Character {
         this.attributes = stats.attributes;
         this.money = stats.money;
     };
+
+    print_status(){
+        const stats = {
+            name: this.name,
+            level: this.level,
+            experience: this.experience,
+            attributes: this.attributes,
+            money: this.money
+        }
+        return stats;
+    }
 }
