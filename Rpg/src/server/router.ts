@@ -11,5 +11,5 @@ router.get("/", async (context) => {
     });
 });
 router.post("/character", (context) => {
-    context.response.body = character
+    context.response.body = character.print_status()
 })
