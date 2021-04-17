@@ -1,5 +1,7 @@
 // @ts-ignore
 import { Router, send } from "https://deno.land/x/oak/mod.ts";
+// @ts-ignore
+import {character} from "../game/main.ts"
 
 export const router = new Router();
 router.get("/", async (context) => {
@@ -8,3 +10,6 @@ router.get("/", async (context) => {
         index: "index.html",
     });
 });
+router.post("/character", (context) => {
+    context.response.body = character
+})
