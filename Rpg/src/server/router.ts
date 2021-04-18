@@ -10,6 +10,6 @@ router.get("/", async (context) => {
         index: "index.html",
     });
 });
-router.post("/character", (context) => {
+router.get("/character", (context) => {
     context.response.body = character.print_status()
 })

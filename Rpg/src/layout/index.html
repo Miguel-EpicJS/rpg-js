@@ -38,11 +38,41 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <button><h1>Play Now</h1></button>
+    <div class="container text-center">
+        <button>
+            <h1>Play Now</h1>
+        </button>
     </div>
 
-    <script></script>
+    <script>
+        const URL = 'http://127.0.0.1:8000/character'
+        fetch(URL, {
+            method: 'get' // opcional
+        })
+            .then(function (response) {
+                response.text()
+                    .then(function (result) {
+                        result = JSON.parse(result)
+                        document.getElementById('name').innerText = result.name
+                        document.getElementById('level').innerText = result.level
+                        document.getElementById('experience').innerText = result.experience
+                        document.getElementById('hp').innerText = result.attributes.hp
+                        document.getElementById('str').innerText = result.attributes.strength
+                        document.getElementById('dex').innerText = result.attributes.dexterity
+                        document.getElementById('con').innerText = result.attributes.constitution
+                        document.getElementById('int').innerText = result.attributes.intelligence
+                        document.getElementById('wis').innerText = result.attributes.wisdom
+                        document.getElementById('cha').innerText = result.attributes.charisma
+                        document.getElementById('copper').innerText = result.money.copper
+                        document.getElementById('silver').innerText = result.money.silver
+                        document.getElementById('gold').innerText = result.money.gold
+                        document.getElementById('platinum').innerText = result.money.platinum
+                    })
+            })
+            .catch(function (err) {
+                console.error(err)
+            })
+    </script>
 </body>
 
 </html>
